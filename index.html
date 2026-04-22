@@ -523,18 +523,20 @@
 
     /* Mobile */
     @media(max-width:600px){
-      /* Nav - logo à droite, actions à gauche */
+      /* Nav mobile : logo gauche, [hamburger + tel] droite */
       nav {
-        padding:10px 14px;
-        display:flex; flex-direction:row-reverse;
+        padding:6px 14px;
+        display:flex; flex-direction:row;
         align-items:center; justify-content:space-between;
         flex-wrap:nowrap; gap:8px;
       }
       .nav-links { display:none; }
-      .nav-logo { margin-right:0; }
-      .nav-logo img { height:90px; width:auto; margin-left:8px; }
-      .nav-phone { font-size:.82rem;padding:8px 14px;white-space:nowrap;flex-shrink:0; }
-      .nav-wa { font-size:.8rem;padding:8px 13px; }
+      .nav-logo { margin-right:0; flex-shrink:0; }
+      .nav-logo img { height:100px; width:auto; }
+      .nav-actions { flex-direction:column; align-items:flex-end; gap:5px; }
+      .hamburger { display:flex; align-self:flex-end; }
+      .nav-phone { font-size:.8rem; padding:7px 13px; white-space:nowrap; }
+      .nav-wa { display:none; }
 
       /* Hero */
       #hero { padding:110px 16px 40px;gap:24px; }
@@ -632,9 +634,8 @@
       .services-grid { grid-template-columns:1fr; }
       .contact-info { grid-template-columns:1fr; }
       .review-card { min-width:calc(100vw - 80px);max-width:calc(100vw - 80px); }
-      .nav-phone { font-size:.72rem;padding:7px 10px; }
-      .nav-wa { font-size:.72rem;padding:7px 9px; }
-      .nav-logo img { height:80px; }
+      .nav-phone { font-size:.72rem;padding:6px 10px; }
+      .nav-logo img { height:85px; }
     }
 
     /* SIDEBAR MOBILE */
@@ -726,10 +727,10 @@
     <li><a href="#faq">שאלות</a></li>
     <li><a href="#contact">צור קשר</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="פתח תפריט" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
   <div class="nav-actions">
+    <button class="hamburger" id="hamburger" aria-label="פתח תפריט" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <a href="tel:0504490127" class="nav-phone">📞 050-449-0127</a>
     <a href="https://wa.me/972504490127?text=%D7%94%D7%99%D7%99%21%20%D7%94%D7%92%D7%A2%D7%AA%D7%9D%20%D7%9C%D7%9E%D7%A7%D7%A1%D7%99%20%D7%A0%D7%99%D7%A7%D7%99%D7%95%D7%9F%2C%20%D7%90%D7%99%D7%9A%20%D7%90%D7%95%D7%9B%D7%9C%20%D7%9C%D7%A2%D7%96%D7%95%D7%A8%3F" class="nav-wa" target="_blank" aria-label="וואטסאפ">
       <svg viewBox="0 0 32 32" width="20" fill="white"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.736 5.469 2.023 7.773L0 32l8.418-2.004A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm7.27 19.503c-.396-.198-2.345-1.157-2.708-1.288-.363-.132-.627-.198-.891.198-.264.396-1.023 1.288-1.254 1.554-.23.264-.462.297-.858.099-.396-.198-1.672-.616-3.185-1.966-1.177-1.05-1.972-2.346-2.203-2.742-.23-.396-.025-.61.173-.807.178-.177.396-.462.594-.693.198-.23.264-.396.396-.66.132-.264.066-.495-.033-.693-.099-.198-.891-2.149-1.221-2.94-.32-.773-.648-.668-.891-.68l-.759-.013c-.264 0-.693.099-1.056.495-.363.396-1.386 1.354-1.386 3.302 0 1.948 1.419 3.83 1.617 4.095.198.264 2.793 4.264 6.766 5.982.946.408 1.684.652 2.258.834.949.301 1.813.259 2.496.157.761-.114 2.345-.959 2.676-1.884.33-.924.33-1.717.23-1.882-.099-.165-.363-.264-.759-.462z"/></svg>
